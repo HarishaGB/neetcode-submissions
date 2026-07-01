@@ -1,0 +1,17 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+       // using sorting
+         Arrays.sort(nums);
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                return true;
+            }
+        }
+        return false;
+
+        //using streams
+       // return Arrays.stream(nums).distinct().count() < nums.length;
+        
+        
+    }
+}
